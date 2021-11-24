@@ -1,0 +1,9 @@
+#!/bin/bash
+#ping 10.0.0.2
+#ping 10.0.0.3
+#ping 10.0.0.4
+#ping 10.0.0.5
+#ping 10.0.0.6
+sudo ifconfig h1-eth0 mtu 9000 up
+echo -e "Replaying traffic!"
+sudo tcpreplay -i h1-eth0 lab_1_full_ip_mac-0000.pcap
